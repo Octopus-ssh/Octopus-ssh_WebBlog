@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="Octopus logo.jpeg">
+    <link rel="icon" href="Octopus logo.jpeg" type="image/x-icon">
+
+    <meta charset="utf-8">
+    <title>Octopus Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sqli.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      
+      <label class="logo">Octopus</label>
+      <ul>
+        <li><a class="active" href="..\..\index.html">Home</a></li>
+        <li><a href="..\..\about_us.html">About me</a></li>
+        <li><a href="..\..\topic.html">Topic</a></li>
+      </ul>
+
+    </nav>
+    <section>
+
+        <!--WHAT IS SQLI-->
+
+        <h1>What is SQLI ?</h1>
+        <hr>
+        <p>SQL injection is a computing technique in which an attacker injects malicious SQL code into an input that is then executed by a database. In practice, the goal is to exploit query handling flaws to gain unauthorized access or damage data in the database.</p>
+        
+        <!--WHAT IS SQLI-->
+
+       <!--Low level DVWA-->
+
+        <h1>Low level DVWA</h1>
+        <hr>
+        <p>The first level of DVWA is low. We can notice a simple page that if you give an input 1 to 5. It will return an output of a diffrent account.<br><br>like in this exaple :</p>
+        <img src="SQLI_Low.png" alt="sqli low level photo">
+        <br><br>
+        <p>Now our goal is try to retrive all the accounts. The first script that we could try it's this :</p>
+        <br><br>
+        <ul>
+            <li>'OR 1=1#</li>
+            <li>'OR 1=1--</li>
+            <li>'OR 1=1-- -</li>
+        </ul>
+
+        <p>There are three diffrent method to retrive all the data to a database (diffrent for the diffrent database). These attempts use the single quote character (') to close any running strings in SQL queries and then add additional clauses. In the example, 1=1 is always true, so the goal could be to gain unauthorized access or manipulate the query result.If we try to use 'OR 1=1#.</p>
+        <img src="SQLI_Low_response.png">
+
+        <p>We have solved it :)))))</p>
+        
+       <!--Low level DVWA-->
+       
+        
+        <br><br><br>
+        
+
+    </section>
+  </body>
+</html>
